@@ -116,6 +116,9 @@ main section {
   width: 30%;
   height: 15%;
 }
+.guessbox {
+  border: 1px sloid beige;
+}
 
 /* h1 {
   font-size: 60px;
