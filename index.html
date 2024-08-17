@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header><h1>Guess My Number</h1></header>
+
+    <main>
+      <section>
+        <div class="box1">
+          <button onclick="resetGame()" class="again-btn buttons">Again</button>
+        </div>
+        <div id=" " class="box1">
+          <h2 id="MinMax" class="texts">guess number 0 >20</h2>
+        </div>
+        <div class="box1"></div>
+      </section>
+
+      <section>
+        <div class="box1 box2">
+          <h3 class="texts" id="score">Score :</h3>
+          <div class="result">
+            <h1 id="number">name</h1>
+          </div>
+        </div>
+
+        <div class="box1 box2">
+          <input
+            class="result"
+            min="0"
+            max="50"
+            id="numberInput"
+            type="number"
+          />
+          <button id="check" onclick="checkNumber()" class="buttons cheak">
+            Check
+          </button>
+        </div>
+      </section>
+
+      <section>
+        <div class="box1">
+          <button
+            id="easy"
+            onclick="easyMode()"
+            class="again-btn level-btn buttons"
+          >
+            Easy
+          </button>
+          <button
+            id="middel"
+            onclick="middleMode()"
+            class="again-btn level-btn buttons"
+          >
+            middle
+          </button>
+          <button
+            id="hard"
+            onclick="hardMode()"
+            class="again-btn level-btn buttons"
+          >
+            Hard
+          </button>
+        </div>
+
+        <div class="box1"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
