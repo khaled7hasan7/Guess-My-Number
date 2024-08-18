@@ -15,6 +15,8 @@ const resultBox = document.querySelector(".result");
 let RealNumber;
 let score = 100;
 
+// Levels
+
 // Level 1
 const easyMode = () => {
   resetGame();
@@ -74,6 +76,7 @@ const resetStyle = () => {
 //
 //
 //
+
 function checkNumber() {
   const numberValue = parseInt(guessNumber.value, 10);
 
@@ -93,10 +96,19 @@ function checkNumber() {
   } else {
     numberR.textContent = `UP ↑ `;
   }
+  guessNumber.value = null;
   score -= 5;
   score < 60
     ? (scoreText.textContent = `Score : ${score} 😡`)
     : (scoreText.textContent = `Score : ${score}`);
 }
+
+document
+  .getElementById("numberInput")
+  .addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      checkNumber();
+    }
+  });
 
 easyMode();
