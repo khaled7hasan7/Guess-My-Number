@@ -8,15 +8,14 @@ const min_max = document.querySelector("#MinMax");
 const scoreText = document.querySelector("#score");
 const numberR = document.querySelector("#number");
 const guessNumber = document.querySelector("#numberInput");
+const aboutGame = document.querySelector("#btnAbout");
 const num1 = 3;
-
 const resultBox = document.querySelector(".result");
 
 let RealNumber;
 let score = 100;
 
 // Levels
-
 // Level 1
 const easyMode = () => {
   resetGame();
@@ -72,10 +71,6 @@ const resetStyle = () => {
   document.querySelector("#middel").style.backgroundColor = "#302e2e";
   document.querySelector("#hard").style.backgroundColor = "#302e2e";
 };
-//
-//
-//
-//
 
 function checkNumber() {
   const numberValue = parseInt(guessNumber.value, 10);
@@ -103,12 +98,5 @@ function checkNumber() {
     : (scoreText.textContent = `Score : ${score}`);
 }
 
-document
-  .getElementById("numberInput")
-  .addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-      checkNumber();
-    }
-  });
-
+import("./Events.js");
 easyMode();

@@ -119,6 +119,59 @@ main section {
 .guessbox {
   border: 1px sloid beige;
 }
+
+.heddin {
+  display: none;
+}
+
+.about-game {
+  width: 70%;
+  background-color: rgb(255, 255, 255);
+  text-align: start;
+  position: absolute;
+  margin: 100px 16%;
+  z-index: 10;
+  border-radius: 20px;
+  padding: 10px;
+  border: 2px solid rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.226);
+}
+
+.about-game p {
+  color: rgb(0, 0, 0);
+}
+
+.texts {
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+.blur {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
 .MinMax {
-  font-size: 40px;
+  font-size: 33px;
+  color: beige;
+}
+
+.btnParint {
+  width: 100%;
+  height: auto;
+
+  text-align: end;
+}
+.closebtn {
+  background-color: #302e2e00;
+  color: black;
+  border: 0;
+  font-size: 50px;
+  text-shadow: 5px 5px 2px #302e2e81;
+  font-weight: 600;
+  position: relative;
 }
