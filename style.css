@@ -102,13 +102,12 @@ main section {
 
   border: 1px solid beige;
   font-size: 20px;
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
-/* .buttons:hover {
+.buttons:hover {
   background-color: rgb(0, 0, 0);
-  color: beige;
-  border: 2px solid rgb(255, 255, 255);
-} */
+  border: 2px solid rgb(0, 0, 0);
+}
 .level-btn {
   margin-top: 15px;
 }
@@ -119,4 +118,7 @@ main section {
 }
 .guessbox {
   border: 1px sloid beige;
+}
+.MinMax {
+  font-size: 40px;
 }
