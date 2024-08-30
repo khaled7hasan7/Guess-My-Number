@@ -6,7 +6,7 @@ const getRandomNumber = (min, max) => {
 
 const min_max = document.querySelector("#MinMax");
 const scoreText = document.querySelector("#score");
-const numberR = document.querySelector("#number");
+const numberR = document.querySelector(".Rnumber");
 const guessNumber = document.querySelector("#numberInput");
 const aboutGame = document.querySelector("#btnAbout");
 const num1 = 3;
@@ -14,13 +14,16 @@ const resultBox = document.querySelector(".result");
 
 let RealNumber;
 let score = 100;
+let Mode = "light";
 
 // Levels
 // Level 1
 const easyMode = () => {
   resetGame();
   resetStyle();
-  document.querySelector("#easy").style.backgroundColor = "black";
+
+  document.querySelector("#easy").classList.add("holdbtn");
+
   RealNumber = getRandomNumber(0, 20);
   console.log(RealNumber);
   min_max.textContent = "Guess Number : 0 - 20";
@@ -29,7 +32,9 @@ const easyMode = () => {
 const middleMode = () => {
   resetGame();
   resetStyle();
-  document.querySelector("#middel").style.backgroundColor = "black";
+  // document.querySelector("#middel").style.backgroundColor = "black";
+  document.querySelector("#middel").classList.add("holdbtn");
+
   RealNumber = getRandomNumber(0, 30);
   console.log(RealNumber);
   min_max.textContent = "Guess Number  : 0 - 30";
@@ -38,7 +43,9 @@ const middleMode = () => {
 const hardMode = () => {
   resetGame();
   resetStyle();
-  document.querySelector("#hard").style.backgroundColor = "black";
+  // document.querySelector("#hard").style.backgroundColor = "black";
+  document.querySelector("#hard").classList.add("holdbtn");
+
   RealNumber = getRandomNumber(0, 50);
   console.log(RealNumber);
   min_max.textContent = "Guess Number : 0 - 50";
@@ -48,28 +55,35 @@ const hardMode = () => {
 const resetGame = () => {
   score = 100;
   scoreText.textContent = `Score : ${score}`;
-  document.querySelector("#number").textContent = `??`;
-  numberR.textContent = `?? `;
+
+  numberR.textContent = `??`;
   guessNumber.value = null;
 };
 // chang Style after win
 const changStyleeInWin = () => {
-  document.querySelector("body").style.backgroundColor = "#08da19";
-  numberR.style.color = "#08da19";
-  scoreText.style.fontSize = "50px";
-  scoreText.style.color = "black";
-  scoreText.style.fontWeight = "1000";
+  document.querySelector("body").classList.add("winGamebackground");
+  document.querySelector("main").classList.add("winGamebackground");
+  numberR.classList.add("winGame");
+
+  // scoreText.style.fontSize = "50px";
+  // scoreText.style.color = "black";
+  // scoreText.style.fontWeight = "1000";
 };
 // reset Style
 const resetStyle = () => {
-  document.querySelector("body").style.backgroundColor = "#302e2e";
-  numberR.style.color = "beige";
-  scoreText.style.fontSize = "26px";
-  scoreText.style.color = "beige";
-
-  document.querySelector("#easy").style.backgroundColor = "#302e2e";
-  document.querySelector("#middel").style.backgroundColor = "#302e2e";
-  document.querySelector("#hard").style.backgroundColor = "#302e2e";
+  document.querySelector("#easy").classList.remove("holdbtn");
+  document.querySelector("#middel").classList.remove("holdbtn");
+  document.querySelector("#hard").classList.remove("holdbtn");
+  numberR.classList.remove("winGame");
+  document.querySelector("body").classList.remove("winGamebackground");
+  document.querySelector("main").classList.remove("winGamebackground");
+  // document.querySelector("body").style.backgroundColor = "#302e2e";
+  // document.querySelector("main").style.backgroundColor = "#302e2e";
+  // numberR.style.color = "beige";
+  // scoreText.style.color = "beige";
+  // document.querySelector("#easy").style.backgroundColor = "#302e2e";
+  // document.querySelector("#middel").style.backgroundColor = "#302e2e";
+  // document.querySelector("#hard").style.backgroundColor = "#302e2e";
 };
 
 function checkNumber() {
@@ -99,4 +113,69 @@ function checkNumber() {
 }
 
 import("./Events.js");
+
+//
+//
+
+const checkbox = document.querySelector("#checkbox");
+document.addEventListener("DOMContentLoaded", function () {
+  checkbox.addEventListener("change", function () {
+    if (checkbox.checked) {
+      // dark mode
+      setDarkMode();
+      console.log("Checked");
+    } else {
+      // change to Light Mode
+      removeDarkMode();
+      // lightMode();
+      console.log("Not checked");
+    }
+  });
+});
+
+// set Dark Mode
+const header = document.querySelector("header");
+const main = document.querySelector("main");
+const setDarkMode = () => {
+  Mode = "dark";
+
+  // removeDarkMode then set dark mode
+
+  header.classList.add("header-darkMode");
+  main.classList.add("main-darkMode");
+  document.querySelector("body").style.backgroundColor = "#302e2e";
+
+  document.querySelector(".title").classList.add("title-darkMode");
+  document.querySelector(".result").classList.add("result-dark");
+  document.querySelector("#numberInput").classList.add("numberInput-dark");
+  numberR.classList.add("RnumberDark");
+  min_max.classList.add("MinMaxDark");
+  document.querySelector(".texts").classList.add("textsDark");
+  document.querySelector("#easy").classList.add("buttons-dark");
+  document.querySelector("#middel").classList.add("buttons-dark");
+  document.querySelector("#hard").classList.add("buttons-dark");
+  document.querySelector("#check").classList.add("buttons-dark");
+  document.querySelector("#btnAbout").classList.add("buttons-dark");
+};
+
+//
+//Remove Dark mode
+//
+const removeDarkMode = () => {
+  document.querySelector("body").style.backgroundColor = "#ffffff";
+  header.classList.remove("header-darkMode");
+  document.querySelector(".title").classList.remove("title-darkMode");
+  main.classList.remove("main-darkMode");
+  document.querySelector(".result").classList.remove("result-dark");
+  document.querySelector(".numberInput").classList.remove("numberInput-dark");
+  numberR.classList.remove("RnumberDark");
+  min_max.classList.remove("MinMaxDark");
+  document.querySelector(".texts").classList.remove("textsDark");
+  document.querySelector("#easy").classList.remove("buttons-dark");
+  document.querySelector("#middel").classList.remove("buttons-dark");
+  document.querySelector("#hard").classList.remove("buttons-dark");
+  document.querySelector("#check").classList.remove("buttons-dark");
+  document.querySelector("#btnAbout").classList.remove("buttons-dark");
+};
+
 easyMode();

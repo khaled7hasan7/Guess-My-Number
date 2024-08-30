@@ -32,7 +32,7 @@ document
   });
 
 document.addEventListener("keydown", function (e) {
-  console.log(aboutText.className.includes("heddin"));
+  // console.log(aboutText.className.includes("heddin"));
   e.key === "Escape" && aboutText.className.includes("heddin")
     ? rmHeddin()
     : addHeddin();

@@ -1,24 +1,59 @@
 body {
+}
+
+main {
+  background-color: #ffffff;
+}
+
+.main-darkMode {
   background-color: #302e2e;
 }
-main {
-}
+
 /* 333333 */
 header {
   width: 100%;
   height: 120px;
   text-align: center;
-  background-color: black;
+  background-color: #e8e7e7;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background-color: rgb(148, 142, 142);
+  border-bottom: 1px solid #333333;
+}
+
+.header-darkMode {
+  background-color: black;
   border-bottom: 2px solid #333333;
 }
-header h1 {
-  color: white;
+
+/* end header  */
+
+/* start title  */
+.C-title {
+  width: 33%;
+  margin-left: 50px;
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.C-toogel {
+  width: 33%;
+  text-align: end;
+}
+.title {
+  color: #000000;
   font-size: 40px;
 }
+.title-darkMode {
+  color: rgb(255, 255, 255);
+}
+
+/* end title  */
 
 /* main  */
 main {
@@ -66,48 +101,47 @@ main section {
 .result {
   width: 70%;
   height: 70%;
-  background-color: #333333;
+  background-color: #e2dede;
   border-radius: 15px;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid rgb(31, 30, 30);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-.result h1 {
-  font-size: 66px;
-  color: beige;
+
+.result-dark {
+  border: 2px solid rgb(255, 255, 255);
+  background-color: #333333;
 }
 
-#numberInput {
+.numberInput {
   width: 30%;
   height: 30%;
-  border: 1px solid white;
-  color: white;
+  border: 1px solid rgb(2, 2, 2);
+  color: rgb(0, 0, 0);
+  background-color: #e2dede;
   font-size: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
+.numberInput-dark {
+  color: white;
+  border: 1px solid white;
+  background-color: #302e2e;
+}
 .texts {
-  color: beige;
+  /* color: rgb(245, 226, 220); */
   font-size: 26px;
+  text-align: center;
+  color: rgb(0, 0, 0);
 }
-
-.buttons {
-  border-radius: 15px;
+.textsDark {
   color: beige;
-  background-color: #333333;
+}
 
-  border: 1px solid beige;
-  font-size: 20px;
-  transition: all 0.2s;
-}
-.buttons:hover {
-  background-color: rgb(0, 0, 0);
-  border: 2px solid rgb(0, 0, 0);
-}
 .level-btn {
   margin-top: 15px;
 }
@@ -141,10 +175,6 @@ main section {
   color: rgb(0, 0, 0);
 }
 
-.texts {
-  text-align: center;
-  color: rgb(0, 0, 0);
-}
 .blur {
   position: absolute;
   top: 120px;
@@ -157,6 +187,9 @@ main section {
 }
 .MinMax {
   font-size: 33px;
+  color: rgb(0, 0, 0);
+}
+.MinMaxDark {
   color: beige;
 }
 
@@ -174,4 +207,148 @@ main section {
   text-shadow: 5px 5px 2px #302e2e81;
   font-weight: 600;
   position: relative;
+}
+.buttons {
+  /* border-radius: 15px;
+  color: rgb(0, 0, 0);
+  background-color: #ddd3d3; */
+  border-radius: 15px;
+  color: rgb(0, 0, 0);
+  background-color: #e2dede;
+  border: 1px solid rgb(0, 0, 0);
+  font-size: 20px;
+  transition: all 0.2s;
+}
+
+.buttons:hover {
+  color: beige;
+  background-color: #333333;
+  border: 1px solid rgb(223, 223, 222);
+}
+
+.buttons-dark {
+  color: beige;
+  background-color: #333333;
+  border: 1px solid rgb(223, 223, 222);
+}
+
+.buttons-dark:hover {
+  color: beige;
+  background-color: #0c0c0c;
+  border: 1px solid rgb(223, 223, 222);
+}
+
+.holdbtn {
+  color: beige;
+  background-color: #000000;
+}
+.Rnumber {
+  font-size: 66px;
+  color: #000000;
+}
+.RnumberDark {
+  color: beige;
+}
+
+.winGame {
+  color: rgb(14, 207, 14);
+}
+.winGamebackground {
+  background-color: green;
+}
+
+/* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ */
+
+/* From Uiverse.io by Yaya12085 */
+.container {
+  display: flex;
+  position: relative;
+  text-align: end;
+  justify-content: end;
+  margin-right: 70px;
+}
+
+.label {
+  height: 60px;
+  width: 120px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  -webkit-box-shadow: inset 0 0 5px 4px rgba(255, 255, 255, 1),
+    inset 0 0 20px 1px rgba(0, 0, 0, 0.488), 10px 20px 30px rgba(0, 0, 0, 0.096),
+    inset 0 0 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 5px 4px rgba(255, 255, 255, 1),
+    inset 0 0 20px 1px rgba(0, 0, 0, 0.488), 10px 20px 30px rgba(0, 0, 0, 0.096),
+    inset 0 0 0 3px rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+}
+
+.label:hover {
+  -webkit-transform: perspective(100px) rotateX(5deg) rotateY(-5deg);
+  transform: perspective(100px) rotateX(5deg) rotateY(-5deg);
+}
+
+#checkbox:checked ~ .label:hover {
+  -webkit-transform: perspective(100px) rotateX(-5deg) rotateY(5deg);
+  transform: perspective(100px) rotateX(-5deg) rotateY(5deg);
+}
+
+#checkbox {
+  display: none;
+}
+
+#checkbox:checked ~ .label::before {
+  left: 70px;
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #414141 70%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.label::before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #000000;
+  background-image: linear-gradient(
+    130deg,
+    #757272 10%,
+    #ffffff 11%,
+    #726f6f 62%
+  );
+  left: 10px;
+  -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3),
+    10px 10px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3), 10px 10px 10px rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }

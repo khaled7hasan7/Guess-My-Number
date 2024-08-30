@@ -7,13 +7,28 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header><h1>Guess My Number</h1></header>
+    <header class=" ">
+      <div class="C-title"> </div>
+      <div class="C-title">
+        <h1 class="title ">Guess My Number</h1>
+      </div>
+      
+
+
+      <div class="C-toogel">
+         <div class="container">
+            <input type="checkbox" name="checkbox" id="checkbox" />
+            <label  for="checkbox" class="label"> </label>
+        </div>
+      </div>
+     
+    </header>
 
     <div id="aboutText" class="about-game heddin">
       <div class="btnParint"> <button id="close" class="closebtn">×</button></div>
  
 
-      <div class="texts">
+      <div class="textsAbout">
         <h2>How to Play</h2>
 
         <p>
@@ -65,7 +80,7 @@
     </div>
 
 
-    <main>
+    <main class="  ">
 
 
      
@@ -73,9 +88,10 @@
 
       <section>
         <div class="box1">
-          <!-- <h2 class="texts">guess number</h2> -->
+          
+          
           <button id="btnAbout" class="buttons again-btn">About Game</button>
-          <h2 name="MinMax" id="MinMax" class="texts MinMax">0 -20</h2>
+          <h2 name="MinMax" id="MinMax" class=" MinMax">0 -20</h2>
           <!-- <button onclick="resetGame()" class="again-btn buttons">Again</button> -->
         </div>
         <div class="box1"></div>
@@ -86,13 +102,13 @@
         <div class="box1 box2">
           <h3 class="texts" id="score">Score :</h3>
           <div class="result">
-            <h1 id="number"></h1>
+            <h1 class="Rnumber" id="number"></h1>
           </div>
         </div>
 
         <div class="box1 box2">
           <input
-            class="result"
+            class=" result numberInput "
             min="0"
             max="50"
             id="numberInput"
